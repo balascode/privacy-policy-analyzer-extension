@@ -53,6 +53,10 @@ The Save Analysis button stores the current popup result in browser local storag
 
 Set endpoint values in src/popup/api-config.js.
 
+Sometimes the hosted backend may not work or may be temporarily unavailable.
+If you want me to set up the backend locally and run it for you, please open a comment or issue stating add me as a collaborator to backend repo.
+Then we can give you access to the backend and you can start it locally.
+
 Example:
 
 window.API_CONFIG = {
