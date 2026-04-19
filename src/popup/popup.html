@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy Analyzer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-content">
+        <h1>🔒 Privacy Analyzer</h1>
+        <p class="subtitle">Analyze privacy policies in real-time</p>
+      </div>
+    </div>
+
+    <div class="main">
+      <div id="status-banner" class="status-banner">Waiting for selected text...</div>
+
+      <div id="loading" class="state hidden">
+        <div class="spinner"></div>
+        <p>Analyzing your text...</p>
+      </div>
+
+      <div id="error" class="state hidden">
+        <div class="error-icon">⚠️</div>
+        <h3>Not a Privacy Policy</h3>
+        <p id="error-message"></p>
+        <p class="help-text">
+          Select 20+ characters of a privacy policy text and right-click to analyze.
+        </p>
+        <button id="close-btn-error" class="btn-secondary">Close</button>
+      </div>
+
+      <div id="results" class="state hidden">
+        <div id="summary-card" class="summary-card">
+          <div class="summary-top">
+            <h2>Analysis Results</h2>
+            <span id="risk-badge" class="risk-badge"></span>
+          </div>
+          
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-label">Total Clauses</span>
+              <span id="total-clauses" class="stat-value">0</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Risk Level</span>
+              <span id="risk-level" class="stat-value"></span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Risky Clauses</span>
+              <span id="risky-count" class="stat-value">0</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Risk Score</span>
+              <span id="risk-score" class="stat-value">0</span>
+            </div>
+          </div>
+
+          <div class="risk-meter">
+            <div id="risk-bar" class="risk-bar"></div>
+            <div class="risk-labels">
+              <span>Low</span>
+              <span>High</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="clauses-container" class="clauses-container">
+        </div>
+
+        <div class="actions">
+          <button id="copy-btn" class="btn-secondary">📋 Copy Results</button>
+          <button id="save-btn" class="btn-primary">💾 Save Analysis</button>
+          <button id="new-analysis-btn" class="btn-secondary">🔍 New Analysis</button>
+        </div>
+      </div>
+
+      <div id="no-selection" class="state">
+        <div class="empty-icon">📄</div>
+        <h3>Ready to Analyze</h3>
+        <p>Select any text on a webpage and right-click to analyze it for privacy concerns.</p>
+        <p class="help-text">ML mode: start local API (`uvicorn ml_backend:app --host 127.0.0.1 --port 8000`) from this folder for model-based results.</p>
+        <div class="steps">
+          <ol>
+            <li>Find a privacy policy or terms of service</li>
+            <li>Select relevant text (20+ characters)</li>
+            <li>Right-click and choose "Analyze Privacy Policy"</li>
+            <li>View instant results</li>
+          </ol>
+        </div>
+        <p class="version">Privacy Policy Analyzer v1.0.0</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="api-config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
