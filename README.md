@@ -8,6 +8,20 @@ The extension calls a backend API that uses a hybrid approach:
 
 This repository contains the extension frontend.
 
+## Documentation
+
+GitHub shows only this README on the repository home page.
+Use these links to access the full documentation:
+
+- [Documentation Index](docs/INDEX.md)
+- [Quick Start](docs/QUICKSTART.md)
+- [Installation Guide](docs/INSTALL.md)
+- [Algorithm Details](docs/ALGORITHM.md)
+- [FAQ](docs/FAQ.md)
+- [Contributing Guide](docs/CONTRIBUTING.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Auto Mode Setup](AUTO_MODE_SETUP.md)
+
 ## Main Features
 
 - Right-click analysis lets you select text on any webpage and send it to the analyzer from the context menu.
