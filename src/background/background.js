@@ -70,6 +70,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 // Handle installation and updates
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === "install") {
-    chrome.tabs.create({ url: "https://github.com/yourusername/privacy-policy-analyzer-extension" });
+    chrome.tabs.create({ url: "https://github.com/balascode/privacy-policy-analyzer-extension" });
   }
 });
