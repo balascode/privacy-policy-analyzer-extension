@@ -10,8 +10,8 @@
   <div class="container">
     <div class="header">
       <div class="header-content">
-        <h1>🔒 Privacy Analyzer</h1>
-        <p class="subtitle">Analyze privacy policies in real-time</p>
+        <h1>Privacy Analyzer</h1>
+        <p class="subtitle">Privacy policy risk report</p>
       </div>
     </div>
 
@@ -24,7 +24,7 @@
       </div>
 
       <div id="error" class="state hidden">
-        <div class="error-icon">⚠️</div>
+        <div class="state-symbol error-symbol" aria-hidden="true"></div>
         <h3>Not a Privacy Policy</h3>
         <p id="error-message"></p>
         <p class="help-text">
@@ -72,14 +72,14 @@
         </div>
 
         <div class="actions">
-          <button id="copy-btn" class="btn-secondary">📋 Copy Results</button>
-          <button id="save-btn" class="btn-primary">💾 Save Analysis</button>
-          <button id="new-analysis-btn" class="btn-secondary">🔍 New Analysis</button>
+          <button id="copy-btn" class="btn-secondary">Copy Results</button>
+          <button id="save-btn" class="btn-primary">Save PDF Report</button>
+          <button id="new-analysis-btn" class="btn-secondary">New Analysis</button>
         </div>
       </div>
 
       <div id="no-selection" class="state">
-        <div class="empty-icon">📄</div>
+        <div class="state-symbol document-symbol" aria-hidden="true"></div>
         <h3>Ready to Analyze</h3>
         <p>Select any text on a webpage and right-click to analyze it for privacy concerns.</p>
         <p class="help-text">ML mode: start local API (`uvicorn ml_backend:app --host 127.0.0.1 --port 8000`) from this folder for model-based results.</p>

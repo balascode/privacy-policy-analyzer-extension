@@ -52,19 +52,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     sendResponse({ status: "cleared" });
   }
 
-  if (request.action === "saveAnalysis") {
-    chrome.storage.local.get(["analysisHistory"], (result) => {
-      const history = result.analysisHistory || [];
-      history.unshift({
-        ...request.analysis,
-        savedAt: new Date().toISOString()
-      });
-      chrome.storage.local.set({
-        analysisHistory: history.slice(0, 50)
-      });
-    });
-    sendResponse({ status: "saved" });
-  }
 });
 
 // Handle installation and updates

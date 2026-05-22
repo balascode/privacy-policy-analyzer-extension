@@ -28,21 +28,21 @@ Use these links to access the full documentation:
 - Popup results show the overall risk level, risk score, total clauses, and risky clause count in one window.
 - Clause breakdowns explain why each part of the policy was marked low, medium, or high risk.
 - Hybrid analysis combines machine learning predictions with rule-based privacy checks for more useful results.
-- Save Analysis stores the current result in browser local storage so you can review it later in the same browser profile.
-- History support keeps up to 50 saved analyses in `analysisHistory`.
+- Save PDF Report downloads the current result as a polished PDF through the browser's Downloads flow.
 - Hosted backend mode uses the configured production API, with local fallback available for development.
 - No-selection handling tells you when the highlighted text is missing or too short to analyze.
 - Error handling shows clear messages when the backend is unreachable or the response format is unexpected.
 
-## Save Analysis Button
+## Save PDF Report Button
 
-The Save Analysis button stores the current popup result in browser local storage.
+The Save PDF Report button downloads the current popup result as a PDF report.
 
 - It does not send data to the backend.
-- It saves the full analysis result under `analysisHistory`.
-- It keeps up to 50 saved analyses.
-- It adds a `savedAt` timestamp for each saved item.
-- It is useful for reviewing past results later from the same browser profile.
+- It saves the downloaded file through the browser's normal Downloads flow.
+- It does not store analysis results in Chrome extension local storage.
+- It includes a `savedAt` timestamp in the downloaded PDF.
+- It formats the summary, risk score, guidance, and clause findings in a readable report.
+- It is useful for reviewing or sharing past results as a normal PDF file.
 
 ## How Analysis Works
 
